@@ -1,0 +1,66 @@
+.movieSearchContainer{
+    /* background-color: black; */
+    /* height: 10vh; */
+    display: flex;
+    justify-content: center;
+
+}
+.movieSearchContainer h3{
+    font-size: 20px;
+}
+
+.movieSearchContainer input{
+    height: 40px;
+  
+    /* border-radius: 10px; */
+    outline: none;
+    border: none;
+    width: 30vw;
+    padding: 5px 20px;
+}
+
+
+.container{
+    min-width: 322px;
+    /* top: 55px; */
+    /* position: fixed; */
+    text-align: left;
+    /* left: 445px; */
+    background: #3f3f3c;
+    padding: 20px;
+    max-height: 30vh;
+    overflow-y: auto;
+}
+
+.container .movieItem{
+    color: white;
+}
+
+.container .movieItem:hover{
+
+    background-color: #1c1d1e;
+    opacity: 0.5;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: yellow; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: yellow; 
+  }

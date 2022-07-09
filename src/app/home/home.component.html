@@ -1,0 +1,39 @@
+
+<div style="background-color: black;height: 100vh;" >
+    <div class="movieSearchContainer">
+        <div style="padding: 10px;">
+            <h3 style="color: white;">Search Movie:</h3>
+        </div>
+    
+        <div style="padding: 10px;">
+            <input #searchMovie   type="text"  placeholder="search movie title">
+            <div *ngIf="showContainer" class="container">
+       
+                <div class="movieItem" style="cursor: pointer;" *ngFor="let item of movies">
+                    <div (click)="selectMovie(item)">{{item.Title}}</div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="margin-top: 25px;" *ngIf="showMovie">
+        <div style="display: flex; justify-content: center;">
+            <div style="margin-right: 10px;border: 2px solid beige;">
+                <img src={{selectedMovie.Poster}}>
+            </div>
+            <div style="margin-left: 10px;">
+                <p style="color: #e7ad00;font-size: 30px;text-transform: capitalize;font-weight: 800;">{{selectedMovie.Title}}</p>
+                <p style="color: white;"><strong >Genre: </strong>{{selectedMovie.Type}}</p>
+                <p style="color: white;"><strong >Year: </strong>{{selectedMovie.Year}}</p>
+                <p style="color: white;"><strong >IMbd: </strong>{{selectedMovie.imdbID}}</p>
+
+
+            </div>
+        </div>
+       
+    </div>
+    
+    
+</div>
