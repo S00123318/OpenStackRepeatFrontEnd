@@ -1,0 +1,62 @@
+<h1 mat-dialog-title>Add Movie Form</h1>
+
+<div mat-dialog-content>
+    <form [formGroup]="movieForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Title</mat-label>
+            <input formControlName="Title" matInput placeholder="Title">
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Director</mat-label>
+            <input formControlName="Director" matInput placeholder="Director">
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Genre</mat-label>
+            <mat-select formControlName="Genre"placeholder="Genre">
+                <mat-option value="Action">Action</mat-option>
+                <mat-option value="Comedy">Comedy</mat-option>
+                <mat-option value="Drama">Drama</mat-option>
+                <mat-option value="Fantasy">Fantasy</mat-option>
+                <mat-option value="Horror">Horror</mat-option>
+                <mat-option value="Mystery">Mystery</mat-option>
+                <mat-option value="Romance">Romance</mat-option>
+                <mat-option value="Thriller">Thriller</mat-option>
+            </mat-select>
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Year</mat-label>
+            <input formControlName="Year"matInput type="number" placeholder="Year">
+        </mat-form-field>
+        
+        <label for=""><h2>Ratings 0-5</h2></label>
+        <mat-radio-group formControlName="Ratings" class="example-radio-group">
+            <mat-radio-button class="example-radio-button" *ngFor="let ratings of ratingsList" [value]="ratings">
+                {{ratings}}
+    
+            </mat-radio-button>
+        </mat-radio-group>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Review</mat-label>
+            <textarea formControlName="Review" matInput></textarea>
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Date review was made</mat-label>
+            <input formControlName="Date" matInput [matDatepicker]="picker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field> 
+    </form>
+ 
+
+</div>
+
+<div mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addMovie()">Save</button>
+</div>

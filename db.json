@@ -1,0 +1,44 @@
+{
+  "movieList": [
+    {
+      "Title": "1",
+      "Director": "1",
+      "Genre": "Action",
+      "Year": 1,
+      "Ratings": "0  Never watch again!",
+      "Review": "1",
+      "Date": "2022-07-07T23:00:00.000Z",
+      "id": 1
+    },
+    {
+      "Title": "2",
+      "Director": "2",
+      "Genre": "Comedy",
+      "Year": 1234,
+      "Ratings": "1 Bad",
+      "Review": "123",
+      "Date": "2022-07-05T23:00:00.000Z",
+      "id": 2
+    },
+    {
+      "Title": "Jaws 3",
+      "Director": "John Patrick",
+      "Genre": "Action",
+      "Year": 1993,
+      "Ratings": "4 (Very Good)",
+      "Review": "Left me afraid of the ocean",
+      "Date": "2022-07-02T23:00:00.000Z",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
