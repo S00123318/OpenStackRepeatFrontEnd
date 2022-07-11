@@ -23,6 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DialogComponent } from './dialog/dialog.component';
 import {MatRadioModule} from '@angular/material/radio';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import {MatRadioModule} from '@angular/material/radio';
     HomeComponent,
     NavbarComponent,
     MovieListComponent,
-    DialogComponent
+    DialogComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

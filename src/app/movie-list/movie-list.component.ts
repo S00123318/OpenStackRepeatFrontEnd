@@ -31,7 +31,11 @@ export class MovieListComponent implements OnInit {
    openDialog() {
     this.dialog.open(DialogComponent, {
      width:'30%'
-    });
+    }).afterClosed().subscribe(val=>{
+      if(val==='update'){
+        this.getAllMovies();
+      }
+    })
   }
   
   getAllMovies(){
@@ -57,5 +61,24 @@ export class MovieListComponent implements OnInit {
     }
   }
  
+  editMovie(row : any){
+    this.dialog.open(DialogComponent,{
+      width:'30%',
+      data:row
+    })
+  }
+
+  deleteMovie(id : number){
+    this.api.deleteMovie(id)
+    .subscribe({
+      next:(res)=>{
+        alert("Movie Deleted");
+        this.getAllMovies();
+      },
+      error:()=>{
+        alert("error while deleting")
+      }
+    })
+  }
   
 }
