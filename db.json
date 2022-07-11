@@ -18,6 +18,20 @@
       "password": "12334",
       "mobile": 877031972,
       "id": 1
+    },
+    {
+      "fullname": "dale duncan",
+      "email": "dale@mail.ie",
+      "password": "1234",
+      "mobile": 877031972,
+      "id": 2
+    },
+    {
+      "fullname": "test",
+      "email": "test@mail.ie",
+      "password": "123",
+      "mobile": 123,
+      "id": 3
     }
   ],
   "comments": [

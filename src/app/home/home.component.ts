@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { debounceTime, distinctUntilChanged, fromEvent, map, pluck, switchMap, tap } from 'rxjs';
 import { SearchService } from '../search.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
