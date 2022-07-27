@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit,AfterViewInit {
   constructor(private searchService:SearchService) { }
 
   ngOnInit(): void {
-    console.log('123123')
+    
   }
 
   ngAfterViewInit() {

@@ -25,6 +25,7 @@ import { DialogComponent } from './dialog/dialog.component';
 import {MatRadioModule} from '@angular/material/radio';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { SignupComponent } from './signup/signup.component';
     MovieListComponent,
     DialogComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

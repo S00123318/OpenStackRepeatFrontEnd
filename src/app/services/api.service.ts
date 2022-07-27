@@ -22,4 +22,8 @@ export class ApiService {
   deleteMovie(id : number){
     return this.http.delete<any>("http://localhost:3000/movieList/"+id);
   }
+
+  login(email: string, password: string) {
+    return this.http.post('login', { email, password });
+  }
 }
